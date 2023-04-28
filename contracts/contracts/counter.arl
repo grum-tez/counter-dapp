@@ -1,8 +1,8 @@
 
 archetype counter
 
-variable s : string = ""
+variable count: int = 0
 
-entry exec() {
-  s := "Hello Archetype World!"
+entry add_one() {
+  count := count + 1;
 }

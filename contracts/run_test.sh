@@ -1,6 +1,6 @@
 
 #! /bin/sh
-
+npm run gen-binding
 if [ $# -eq 0 ]; then
   ts-mocha --timeout 0 --slow 99999999999999999 ./tests/*.ts
 else

@@ -5,6 +5,8 @@ import {
   set_mockup_now,
 } from '@completium/experiment-ts'
 
+import { Int } from '@completium/archetype-ts-types'
+
 import { counter } from './binding/counter'
 
 const assert = require('assert')
@@ -34,18 +36,18 @@ describe('Initialisation', async () => {
 
 /* Scenario ---------------------------------------------------------------- */
 
-describe('[HELLO] Contract deployment', async () => {
+describe('[Counter] Contract deployment', async () => {
   it('Deploy test_binding', async () => {
     await counter.deploy({ as: alice })
   })
 })
 
-describe('[HELLO] Call entry', async () => {
-  it("Call 'myentry'", async () => {
-    const s_before = await counter.get_s()
-    assert(s_before === '')
-    await counter.exec({ as: alice })
-    const s_after = await counter.get_s()
-    assert(s_after === 'Hello Archetype World!')
+describe('[Counter] Call add_one', async () => {
+  it("Call 'add_one'", async () => {
+    const counter_before = await counter.get_count()
+    assert(counter_before.equals(new Int(0)))
+    await counter.add_one({ as: alice })
+    const counter_after = await counter.get_count()
+    assert(counter_after.equals(new Int(1)))
   })
 })
