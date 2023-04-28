@@ -2,7 +2,7 @@ import { set_binder_tezos_toolkit } from '@completium/dapp-ts'
 import constate from 'constate'
 import { useState } from 'react'
 
-import { Hello as Contract } from '../dapp-bindings/hello'
+import { Counter as Contract } from '../dapp-bindings/counter'
 import { useContractAddress } from './Settings'
 import { useTezosToolkit } from './Taquito'
 

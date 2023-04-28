@@ -23,7 +23,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "bind-dapp": "completium-cli generate binding-dapp-ts contracts/contracts/hello.arl > src/dapp-bindings/hello.ts",
+    "bind-dapp": "completium-cli generate binding-dapp-ts contracts/contracts/counter.arl > src/dapp-bindings/counter.ts",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",

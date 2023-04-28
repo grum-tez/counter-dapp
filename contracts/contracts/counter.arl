@@ -1,5 +1,5 @@
 
-archetype hello
+archetype counter
 
 variable s : string = ""
 
