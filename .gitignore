@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /contracts/node_modules
+/tezos-packaging
 
 # testing
 /coverage
