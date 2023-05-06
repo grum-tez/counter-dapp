@@ -12,9 +12,9 @@ export const [
   () => {
     const [settingsState] = useState({
       app_name: 'My DApp',
-      endpoint: 'https://ghostnet.ecadinfra.com',
+      endpoint: 'https://ghostnet.tezos.marigold.dev',
       network: NetworkType.GHOSTNET,
-      contract: 'KT1...',
+      contract: 'KT1UtJR46i6pEVLeLx7SMB5Gf5Q9L2y1xiV4',
     })
     return settingsState
   },
